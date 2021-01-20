@@ -7,8 +7,8 @@ we present you the repository and the work flow in which we want you to present 
 Here is the basic setup that we would like you to have such that its easier for you to learn and contribute to the world of drones and planes.
 To see what we do please visit our
 <center>
-<a href= "https://www.youtube.com/user/amciitbhu"><img src="https://i.pinimg.com/originals/62/60/ef/6260efc8fc9a9002669d2f4ad9956cc0.jpg" height="30"/></a>,
-<a href="https://www.instagram.com/amc.iitbhu/"><img src="https://i.pinimg.com/originals/72/a3/d9/72a3d9408d41335f39e9f014dc35cf44.jpg" height="30"/></a>,<a href="https://www.facebook.com/amc.iitbhu/"><img src="https://assets.stickpng.com/images/584ac2d03ac3a570f94a666d.png" height="30"/></a> Channel, and Social Media account : )
+<a href= "https://www.youtube.com/user/amciitbhu"><img src="http://clipart-library.com/images_k/youtube-logo-png-transparent/youtube-logo-png-transparent-16.png" height="30"/></a>,
+<a href="https://www.instagram.com/amc.iitbhu/"><img src="http://clipart-library.com/images_k/instagram-transparent-png/instagram-transparent-png-4.png" height="30"/></a>,<a href="https://www.facebook.com/amc.iitbhu/"><img src="https://lh3.googleusercontent.com/proxy/kI13b-h_nG_ghTzLByPvvrd_VN7w-tDO09X8FRABcFwjiFxbfEv5uFOqQ57S0PvJPjdJTCfYHG_Rx8ovR02K8adIyonXLpb9Ns4D5N_rLuUope9N0Mu3KquxUZR8IslSuVjd-dxjfHH-qrVUVvcrMkoedVAUQb5ZbG5HwZplvmgoduLoM818QrI" height="30"/></a> Channel, and Social Media account : )
 </center>
 
 ## Installation
