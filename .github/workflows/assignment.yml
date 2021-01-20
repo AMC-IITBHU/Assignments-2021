@@ -1,0 +1,11 @@
+name: Assignment1
+
+on: push
+jobs:
+    assignment-check-1:
+        name: week1
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v2
+            - run: ./Week1/submit.bat
