@@ -8,4 +8,6 @@ jobs:
         
         steps:
             - uses: actions/checkout@v2
-            - run: ./submit.bat
+            - run: |
+                   python3 -m pip install numpy
+                   ./submit.bat
