@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -25,7 +25,8 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    if string.lower() == string[::-1].lower():
+        return True
 
 def sqrt_of_numbers(num):
     '''
@@ -37,11 +38,15 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    if num >= 0:
+        sqroot = float(num**0.5)
+        return sqroot
+    else:
+        return None
 
 def Maximum(arr):
     '''
-    This function returns first maximum and the second minimum
+    This function returns first maximum and the second maximum
     number in the array
     args:
         arr (list)
@@ -50,7 +55,11 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    if arr.__len__() >= 2:
+        arr.sort(reverse=True)
+        return arr[0], arr[1]
+    else:
+        return None
 
 def even_sort(arr):
     '''
@@ -67,7 +76,12 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    even_array = list(i for i in arr if i % 2 == 0)
+    odd_array = list(i for i in arr if not i % 2 == 0)
+    even_array.sort()
+    odd_array.sort()
+    sort_arr = even_array + odd_array
+    return sort_arr
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +102,12 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+    coeff = np.vstack((A, B)).transpose()
+    det = np.linalg.det(coeff)
+    if not det == 0:
+        inv = np.linalg.inv(coeff)
+        eqn = np.array(C, dtype=float).transpose()
+        var = np.matmul(inv, eqn)
+        return var[0], var[1]
+    else:
+        return None
