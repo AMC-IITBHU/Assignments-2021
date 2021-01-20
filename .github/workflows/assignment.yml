@@ -8,4 +8,4 @@ jobs:
         
         steps:
             - uses: actions/checkout@v2
-            - run: ./Week1/submit.bat
+            - run: ./submit.bat
