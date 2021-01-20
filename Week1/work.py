@@ -1,6 +1,7 @@
 import math
 import numpy as np
 
+
 def demo(x):
     '''
     This is a demo function
@@ -12,7 +13,8 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return x ** 2
+
 
 def is_palindrome(string):
     '''
@@ -25,7 +27,12 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    string_reversed=string[::-1].lower()              #Reversing the string and converting it into lower case
+    if string_reversed==string.lower():               #converting the string to lower case to check it against the string_reversed
+        return True
+
+
+
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +44,9 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    square_root=math.sqrt(num)
+    return square_root
+
 
 def Maximum(arr):
     '''
@@ -50,7 +59,14 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    arr.sort(reverse=True)
+    Max1=arr[0]
+    Max2=arr[1]
+
+    return Max1,Max2
+
+
+
 
 def even_sort(arr):
     '''
@@ -67,7 +83,21 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    arr.sort()
+    even_numbers_list = []
+    for number in arr:
+        if number % 2 == 0:
+            even_numbers_list.append(number)
+    odd_numbers_list = []
+    for number in arr:
+        if not number % 2 == 0:
+            odd_numbers_list.append(number)
+
+    final_list = even_numbers_list + odd_numbers_list
+
+    return final_list
+
+
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +118,12 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+
+    a = np.array([A, B])
+    b = np.array(C)
+    solution = np.linalg.solve(a, b)
+    x=solution[0]
+    y=solution[1]
+    return x,y
+
+
