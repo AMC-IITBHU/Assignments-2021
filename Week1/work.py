@@ -21,9 +21,7 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+    return True
 
 def sqrt_of_numbers(num):
     '''
