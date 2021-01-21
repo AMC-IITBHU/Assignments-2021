@@ -44,8 +44,12 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    square_root=math.sqrt(num)
-    return square_root
+    if num>0:
+        square_root=math.sqrt(num)
+        return square_root
+    else:
+        return "Cannot find square root of a negative number"
+
 
 
 def Maximum(arr):
@@ -60,10 +64,19 @@ def Maximum(arr):
 
     ## Code Here
     arr.sort(reverse=True)
-    Max1=arr[0]
-    Max2=arr[1]
+    print(arr)
+    if len(arr)>=2:
+        for n in range(1,len(arr)):           #checking if the array contains maximum number more than once so that Max2 is different than Max1
+            if arr[0]!=arr[n]:
+                Max1=arr[0]
+                Max2=arr[n]
+                break
+    else:
+        return "Array contains less than 2 numbers"
 
     return Max1,Max2
+
+
 
 
 
@@ -118,12 +131,15 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
+    try:                                                       #Checking for the exception when the equations have no solution
+        a = np.array([A, B])
+        b = np.array(C)
+        solution = np.linalg.solve(a, b)
+        x=solution[0]
+        y=solution[1]
+        return x,y
+    except:
+        return "The equations have no solution"
 
-    a = np.array([A, B])
-    b = np.array(C)
-    solution = np.linalg.solve(a, b)
-    x=solution[0]
-    y=solution[1]
-    return x,y
 
 
