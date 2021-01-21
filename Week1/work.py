@@ -10,9 +10,13 @@ def demo(x):
     returns:
         x*x (int)
     '''
+    if(type(x)==int):
+        return x*x
+    else:
+        return "enter integer"
 
     ## Code Here
-    return None
+    
 
 def is_palindrome(string):
     '''
@@ -23,9 +27,13 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
+    rev=''.join(reversed(string))
+    if (string==rev):
+     return True
+     return False
 
     ## Code Here
-    return None
+    
 
 def sqrt_of_numbers(num):
     '''
@@ -35,9 +43,11 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
+    num=abs(num)
+    x=math.sqrt(num)
+    return float(x)
     ## Code Here
-    return None
+   
 
 def Maximum(arr):
     '''
@@ -48,9 +58,19 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
+    large=arr[0]
+    slarge=-1
+    for i in range(1,len(arr)):
+         if (arr[i]>large):
+            slarge=large
+            large=arr[i]
+         elif(slarge<arr[i]):
+            slarge=arr[i] 
+            
+            
+    return large,slarge 
     ## Code Here
-    return None
+    
 
 def even_sort(arr):
     '''
