@@ -10,9 +10,8 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
-    return None
+    
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -23,9 +22,8 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+    
+    return string==string[::-1]
 
 def sqrt_of_numbers(num):
     '''
@@ -36,12 +34,11 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
 
-    ## Code Here
-    return None
+    return math.sqrt(abs(num))
 
 def Maximum(arr):
     '''
-    This function returns first maximum and the second minimum
+    This function returns first maximum and the second maximum
     number in the array
     args:
         arr (list)
@@ -49,8 +46,8 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
 
-    ## Code Here
-    return None
+    arr.sort(reverse=True)
+    return arr[0], arr[1]
 
 def even_sort(arr):
     '''
@@ -66,8 +63,16 @@ def even_sort(arr):
         ## This is any even number is smaller than any odd number
     '''
 
-    ## Code Here
-    return None
+    arr.sort()
+    e=[]
+    b=[]
+    for i in range(len(arr)):
+        if arr[i]%2==0:
+            e=np.append(e,arr[i])
+        else:
+            b=np.append(b,arr[i])
+    
+    return np.concatenate((e,b))
 
 
 def eqn_solver(A, B, C):
@@ -86,6 +91,10 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
-    ## Code Here
-    return None
+    d= A[0]*B[1]-A[1]*B[0]
+    if d!=0:
+        x=(B[1]*C[0]-B[0]*C[1])/d
+        y=(A[1]*C[0]-A[0]*C[1])/-d
+        return  x,y
+    else:
+        return "x and y can be anything"
