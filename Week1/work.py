@@ -72,7 +72,7 @@ def even_sort(arr):
         else:
             b=np.append(b,arr[i])
     
-    return np.concatenate((e,b))
+    return list(np.concatenate((e,b)))
 
 
 def eqn_solver(A, B, C):
