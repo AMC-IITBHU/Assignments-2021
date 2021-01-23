@@ -118,18 +118,18 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-    a1, a2 = A
-    b1, b2 = B
-    c1, c2 = C
+      a1, a2 = A
+      b1, b2 = B
+      c1, c2 = C
 
-    coeff = np.array([[a1, b1], [a2, b2]])
-    constant = np.array([[c1], [c2]])
-    inv = np.linalg.inv(coeff)
-    actual = np.dot(inv,constant)
-    d = actual.reshape(1,-1)
-    x = d[0][0]
-    y = d[0][1]
+      coeff = np.array([[a1, b1], [a2, b2]])
+      constant = np.array([[c1], [c2]])
+      inv = np.linalg.inv(coeff)
+      actual = np.dot(inv,constant)
+      d = actual.reshape(1,-1)
+      x = d[0][0]
+      y = d[0][1]
 
-    return x,y
+      return x,y
     ## Code Here
    
