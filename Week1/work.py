@@ -10,10 +10,9 @@ def demo(x):
     returns:
         x*x (int)
     '''
-    if(type(x)==int):
+    
         return x*x
-    else:
-        return "enter integer"
+    
 
     ## Code Here
     
@@ -85,7 +84,20 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
+    even=[]
+    for num in arr:
+        if num % 2 == 0:
+            even.append(num)
+    odd=[]
+    for num in arr:
+        if not num % 2 == 0:
+            odd.append(num)
+    even.sort()
+    odd.sort()
 
+    result = even + odd
+
+    return result 
     ## Code Here
     return None
 
@@ -106,6 +118,18 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
+    a1, a2 = A
+    b1, b2 = B
+    c1, c2 = C
 
+    coeff = np.array([[a1, b1], [a2, b2]])
+    constant = np.array([[c1], [c2]])
+    inv = np.linalg.inv(coeff)
+    actual = np.dot(inv,constant)
+    d = actual.reshape(1,-1)
+    x = d[0][0]
+    y = d[0][1]
+
+    return x,y
     ## Code Here
     return None
