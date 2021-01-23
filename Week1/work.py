@@ -99,7 +99,7 @@ def even_sort(arr):
 
     return result 
     ## Code Here
-    return None
+    
 
 
 def eqn_solver(A, B, C):
@@ -132,4 +132,4 @@ def eqn_solver(A, B, C):
 
     return x,y
     ## Code Here
-    return None
+   
