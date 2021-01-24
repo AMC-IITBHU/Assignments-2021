@@ -88,7 +88,9 @@ def even_sort(arr):
             even_list.append(i)
         else:
             odd_list.append(i)
-    n_list=[sorted(even_list)+sorted(odd_list)]        
+    odd_list.sort()
+    even_list.sort()
+    n_list=even_list+odd_list        
             
             
     return n_list
