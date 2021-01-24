@@ -28,11 +28,11 @@ def is_palindrome(string):
     n=len(str)
     flag=0
     str=str.lower()
-    for i in range(0,n/2):
+    for i in range(0,n):
         if(str[i]==str[n-1-i]):
-            flag="True"
+            flag=True
         else:
-            flag="False"
+            flag=False
     return flag
 
 def sqrt_of_numbers(num):
@@ -87,15 +87,13 @@ def even_sort(arr):
     arr1=[]
     arr2=[] 
     sort_arr=[]
-
+     n=len(arr)
  
     arr.sort()
-    for i in arr:
+    for i in range(0,n):
         
-            
-       
-            if(arr[i]%2==0):
-               arr1.append(arr[i])
+         if(arr[i]%2==0):
+                arr1.append(arr[i])
             else:
                 arr2.append(arr[i])
                 
