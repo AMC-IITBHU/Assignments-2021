@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return x**2
 
 def is_palindrome(string):
     '''
@@ -23,9 +23,17 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+     m=string.lower()
+    s=''
+    for i in m:
+        s=i+s
+    if s==m:
+        c=True
+    else:
+        c=False
+    
+    return c
+    
 
 def sqrt_of_numbers(num):
     '''
@@ -36,8 +44,10 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
 
-    ## Code Here
-    return None
+    new_num=abs(num)
+    
+    return math.sqrt(new_num)
+
 
 def Maximum(arr):
     '''
@@ -49,8 +59,12 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
 
-    ## Code Here
-    return None
+    lst=sorted(arr)
+    Max1=lst[-1]
+    Max2=lst[-2]
+    return Max1,Max2
+
+    
 
 def even_sort(arr):
     '''
@@ -66,8 +80,19 @@ def even_sort(arr):
         ## This is any even number is smaller than any odd number
     '''
 
-    ## Code Here
-    return None
+    even_list=[]
+    odd_list=[]
+
+    for i in arr:
+        if i%2==0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    n_list=[sorted(even_list)+sorted(odd_list)]        
+            
+            
+    return n_list
+   
 
 
 def eqn_solver(A, B, C):
@@ -87,5 +112,13 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    ## Code Here
-    return None
+    x=np.array([A,B])
+    y=np.array(C)
+    soln=np.linalg.solve(x,y)
+    x=soln[0]
+    y=soln[1]
+    
+
+    return x,y
+
+   
