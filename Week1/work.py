@@ -87,15 +87,15 @@ def even_sort(arr):
     arr1=[]
     arr2=[] 
     sort_arr=[]
-     n=len(arr)
+    n=len(arr)
  
     arr.sort()
     for i in range(0,n):
         
          if(arr[i]%2==0):
                 arr1.append(arr[i])
-            else:
-                arr2.append(arr[i])
+         else:
+            arr2.append(arr[i])
                 
                
     
