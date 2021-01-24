@@ -6,7 +6,7 @@ Problem - 0
 Print the odd values in the given array
 '''
 arr = [5,99,36,54,88]#
-##Code Here
+#Code Here
 for i in arr:
     if i%2==0:
         pass
