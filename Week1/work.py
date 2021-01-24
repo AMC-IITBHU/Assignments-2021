@@ -25,11 +25,11 @@ def is_palindrome(string):
     '''
 
    
-    n=len(str)
-    flag=0
-    str=str.lower()
+    n=len(string)
+    flag=False
+    string=string.lower()
     for i in range(0,n):
-        if(str[i]==str[n-1-i]):
+        if(string[i]==string[n-1-i]):
             flag=True
         else:
             flag=False
