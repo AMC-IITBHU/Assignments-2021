@@ -10,9 +10,7 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -23,9 +21,12 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+    new_string = string[::-1]
+    if string == new_string :
+        result = True
+    else:
+        result = False
+    return result
 
 def sqrt_of_numbers(num):
     '''
@@ -35,9 +36,11 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
-    ## Code Here
-    return None
+    if num >= 0 :
+        result = num**0.5 
+    else:
+        result = abs(num**0.5)
+    return result
 
 def Maximum(arr):
     '''
@@ -48,9 +51,11 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
-    ## Code Here
-    return None
+    arr.sort()
+    max1 = arr[-1]
+    max2 = arr[-2]
+    result = (max1,max2)
+    return result
 
 def even_sort(arr):
     '''
@@ -65,9 +70,16 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
-
-    ## Code Here
-    return None
+    new1 = []
+    new2 = []
+    for i in arr:
+        if i % 2 == 0:
+            new1.append(i)
+        else:
+            new2.append(i)
+    new1.sort()
+    new2.sort()
+    return new1 + new2
 
 
 def eqn_solver(A, B, C):
