@@ -27,7 +27,6 @@ Print the reverse of a string
 '''
 string = 'Reverse Me!'
 s=''
-a='pyhton lovers'
-for i in a:
+for i in string:
     s=i+s
 print(s)
