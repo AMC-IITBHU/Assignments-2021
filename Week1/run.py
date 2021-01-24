@@ -5,8 +5,8 @@
 Problem - 0
 Print the odd values in the given array
 '''
-arr = [5,99,36,54,88]
-## Code Here
+arr = [5,99,36,54,88]#
+##Code Here
 for i in arr:
     if i%2==0:
         pass
@@ -23,7 +23,7 @@ for i in range(0,101):
         if i%a==0:
             break
     else:
-        print(i)
+      print(i)
 '''
 Problem - 2
 Print the reverse of a string
