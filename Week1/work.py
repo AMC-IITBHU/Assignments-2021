@@ -26,11 +26,11 @@ def is_palindrome(string):
 
     ## Code Here
     return None
-    n=len(str)
+    n=len(string)
     bool=0
-    str=str.lower()
+    string=string.lower()
     for i in range(0,n):
-        if(str[i]==str[n-1-i]):
+        if(string[i]==string[n-1-i]):
             bool="True"
         else:
             bool="False"
@@ -49,10 +49,10 @@ def sqrt_of_numbers(num):
     ## Code Here
     return None
     num=abs(num)
-    sqrt=num ** 0.5
+    num=num ** 0.5
     
    
-    return float(sqrt)
+    return float(num)
 
 def Maximum(arr):
     '''
@@ -68,11 +68,10 @@ def Maximum(arr):
     return None
     arr.sort()
     
-    Max1=arr[-1]
-    Max2=arr[-2]
+   
     
   
-    return Max1,Max2
+    return Max1,Max2(arr[-1],arr[-2])
 
 def even_sort(arr):
     '''
@@ -101,9 +100,9 @@ def even_sort(arr):
             
        
             if(arr[i]%2==0):
-               arr1.append(arr[i])
+               arr1=arr[i]
             else:
-                arr2.append(arr[i])
+                arr2=arr[i]
                
     
     arr3=arr1+arr2
