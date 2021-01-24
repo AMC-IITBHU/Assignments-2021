@@ -52,11 +52,8 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
     arr.sort()
-    max1 = arr[-1]
-    max2 = arr[-2]
-    result = (max1,max2)
-    return result
-
+    return (arr[-1],arr[-2])
+    
 def even_sort(arr):
     '''
     This function sorts the array giving higher preference to even numbers
@@ -81,7 +78,6 @@ def even_sort(arr):
     new2.sort()
     return new1 + new2
 
-
 def eqn_solver(A, B, C):
     '''
     This function solves a two variable system
@@ -98,6 +94,7 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
-    ## Code Here
-    return None
+    x = np.array([A, B])
+    y = np.array(C)
+    result = np.linalg.solve(x,y)
+    return (result[0], result[1])
