@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+
 
 def is_palindrome(string):
     '''
@@ -32,7 +32,7 @@ def is_palindrome(string):
     if pal==string:
         return True
     else:
-        return False  de Here
+        return False  
  
 
 def sqrt_of_numbers(num):
