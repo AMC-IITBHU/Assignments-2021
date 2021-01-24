@@ -24,8 +24,7 @@ def is_palindrome(string):
         flag (bool)
     '''
 
-    ## Code Here
-    return None
+   
     n=len(string)
     bool=0
     string=string.lower()
@@ -46,8 +45,7 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
 
-    ## Code Here
-    return None
+  
     num=abs(num)
     num=num ** 0.5
     
@@ -64,8 +62,7 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
 
-    ## Code Here
-    return None
+  
     arr.sort()
     
    
@@ -87,8 +84,7 @@ def even_sort(arr):
         ## This is any even number is smaller than any odd number
     '''
 
-    ## Code Here
-    return None
+   
     arr1=[]
     arr2=[] 
     arr3=[]
@@ -129,8 +125,8 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    ## Code Here
-    return None
+  
+   
     lst=[] 
  
     lst1=[]
