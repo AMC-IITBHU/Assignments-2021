@@ -25,16 +25,15 @@ def is_palindrome(string):
     '''
 
    
-    n=len(string)
-    bool=0
-    string=string.lower()
-    for i in range(0,n):
-        if(string[i]==string[n-1-i]):
-            bool="True"
+    n=len(str)
+    flag=0
+    str=str.lower()
+    for i in range(0,n/2):
+        if(str[i]==str[n-1-i]):
+            flag="True"
         else:
-            bool="False"
-    return bool
-    
+            flag="False"
+    return flag
 
 def sqrt_of_numbers(num):
     '''
@@ -68,7 +67,7 @@ def Maximum(arr):
    
     
   
-    return Max1,Max2(arr[-1],arr[-2])
+    return arr[-1],arr[-2]
 
 def even_sort(arr):
     '''
@@ -87,7 +86,7 @@ def even_sort(arr):
    
     arr1=[]
     arr2=[] 
-    arr3=[]
+    sort_arr=[]
 
  
     arr.sort()
@@ -96,16 +95,17 @@ def even_sort(arr):
             
        
             if(arr[i]%2==0):
-               arr1=arr[i]
+               arr1.append(arr[i])
             else:
-                arr2=arr[i]
+                arr2.append(arr[i])
+                
                
     
-    arr3=arr1+arr2
+    sort_arr=arr1+arr2
    
 
    
-    return arr3
+    return sort_arr
 
 
 def eqn_solver(A, B, C):
@@ -125,23 +125,9 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-  
-   
-    lst=[] 
- 
-    lst1=[]
-   
-    lst2=[]
-    lst=[int(item) for item in input("A=").split()]
-    lst1=[int(item) for item in input("B=").split()]
-    lst2=[int(item) for item in input("C=").split()]
-    
-     
       
-    x=float((lst2[0]*lst1[1])-(lst2[1]*lst1[0]))/((lst1[1]*lst[0])-(lst[1]*lst1[0]))
-    y=float((lst2[0]*lst[1])-(lst2[1]*lst[0]))/((lst1[0]*lst[1])-(lst[0]*lst1[1]))
-      
-     
+    x=float((C[0]*B[1])-(C[1]*B[0]))/((B[1]*A[0])-(A[1]*B[0]))
+    y=float((C[0]*A[1])-(C[1]*A[0]))/((B[0]*A[1])-(A[0]*B[1]))
 
    
     return float(x),float(y)
