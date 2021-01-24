@@ -23,7 +23,7 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-     m=string.lower()
+    m=string.lower()
     s=''
     for i in m:
         s=i+s
