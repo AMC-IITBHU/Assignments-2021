@@ -2,90 +2,50 @@ import math
 import numpy as np
 
 def demo(x):
-    '''
-    This is a demo function
-    Where in you just return square of the number
-    args:
-        x (int)
-    returns:
-        x*x (int)
-    '''
-
-    ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
-    '''
-    This function returns True if the given string is
-    a Palindrome
-    args:
-        string (str)
-    returns:
-        flag (bool)
-    '''
-
-    ## Code Here
-    return None
+    t = int(len(s)/2)
+    for i in range(0, t):
+        if s[i] != s[len(s)-i-1]:
+            return 0
+    else:
+        return 1
+   
 
 def sqrt_of_numbers(num):
-    '''
-    This function returns the magnitude of the square root of the number
-    args:
-        num (int) Need not be positive
-    returns:
-        sqroot (float)
-    '''
-
-    ## Code Here
-    return None
-
+    return sqrt(num)
 def Maximum(arr):
-    '''
-    This function returns first maximum and the second minimum
-    number in the array
-    args:
-        arr (list)
-    returns:
-        Max1, Max2 (int, int)
-    '''
+   Max = max(arr)
+   arr.remove(min(arr))
+   sec_min = min(arr)
+    
+   return Max, sec_min
 
-    ## Code Here
-    return None
 
 def even_sort(arr):
-    '''
-    This function sorts the array giving higher preference to even numbers
-    args:
-        arr (list)
-    returns:
-        sort_arr (list)
-    ex:
-        arr = [15, 2, 6, 88, 7]
-        ## then
-        sort_arr = [2, 6, 88 ,7 ,15]
-        ## This is any even number is smaller than any odd number
-    '''
+    even = []
+    arr1 = []
+    for i in arr:
+        if i % 2 == 0:
+            even.append(i)
+        else:
+            arr1.append(i)
+    for i in range(0, len(even)):
+        for j in range(i + 1, len(even)):
+            if even[i] > even[j]:
+                even[i], even[j] = even[j], even[i]
+    for i in range(0, len(arr1)):
+        for j in range(i + 1, len(arr1)):
+            if arr1[i] > arr1[j]:
+                arr1[i], arr1[j] = arr1[j], arr1[i]
+    arr = even + arr1
+    return arr
 
-    ## Code Here
-    return None
 
 
 def eqn_solver(A, B, C):
-    '''
-    This function solves a two variable system
-    i.e.,
-        A = [ 1, 2 ]
-        B = [ 3, 4 ]
-        C = [ 5, 6 ]
-        then it means
-        1x + 3y = 5
-        2x + 4y = 6
-        Hence you are required to find x, y for such a linear system
-    args:
-        A, B, C (list, list, list) representing coefficients in the equation
-    returns:
-        x, y (float, float)
-    '''
-
-    ## Code Here
-    return None
+    x = (C[0]*A[1]-C[1]*A[0])/(A[1]*B[0]-A[0]*B[1])
+    y = (C[0]*B[1]-C[1]*B[0])/(B[1]*A[0]-B[0]*A[1])
+    
+    return x,y
