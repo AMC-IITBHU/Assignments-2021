@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return (x*x)
 
 def is_palindrome(string):
     '''
@@ -25,7 +25,14 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    l=len(string)
+    pal=''
+    for i in range(0,l):
+        pal+=string[l-1-i]
+    if pal==string:
+        return True
+    else:
+        return False
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +44,10 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    if num<0:
+        num=-num
+    sq=math.sqrt(num)    
+    return sq
 
 def Maximum(arr):
     '''
@@ -50,7 +60,14 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    l=len(arr)
+    for i in range(0,l):
+        for j in range(0,l-i-1):
+            if arr[j]>arr[j+1]:
+                temp=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+    return arr[l-1],arr[1]
 
 def even_sort(arr):
     '''
@@ -67,7 +84,31 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    l=len(arr)
+    c=0
+    for i in range(0,l):
+        if arr[i]%2==0:
+            for j in range(0,i):
+                if arr[j]%2==1:
+                    temp=arr[j]
+                    arr[j]=arr[i]
+                    arr[i]=temp
+    for i in range(0,l):
+        if arr[i]%2==0:
+            c+=1
+    for i in range(0,c):
+        for j in range(0,c-i-1):
+            if arr[j]>arr[j+1]:
+                temp=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+    for i in range(c,l):
+        for j in range(c,l-i-1+c):
+            if arr[j]>arr[j+1]:
+                tem=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=tem
+    return arr
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +129,9 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+    d=(A[0]*B[1])-(A[1]*B[0])
+    if d==0:
+        return False
+    x=((C[0]*B[1])-(C[1]*B[0]))/d
+    y=((C[1]*A[0])-(C[0]*A[1]))/d
+    return x,y
