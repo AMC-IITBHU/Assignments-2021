@@ -12,7 +12,15 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+def square(num):
+    return num * num
+
+
+number = float(input("please enter any numeric value:"))
+
+sqre = square(number)
+
+print("the square of a given number", sqre)
 
 def is_palindrome(string):
     '''
@@ -25,7 +33,18 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+def ispalindrome(string):
+    left_pos = 0
+    right_pos = len(string) - 1
+
+    while right_pos >= left_pos:
+       if not string[left_pos] == string[right_pos]:
+           return False
+       left_pos += 1
+       right_pos -= 1
+       return True
+
+print(ispalindrome("aza"))
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +56,13 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+ def sqrt(n):
+    if n < 0:
+        return
+    else:
+        return n ** 0.5
+
+print(sqrt(61))
 
 def Maximum(arr):
     '''
@@ -50,7 +75,18 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+     n = len(arr)
+    max = arr[0]
+    for i in range(1, n):
+        if arr[i] > max:
+            max = arr[i]
+    return max
+
+
+arr = [10, 324, 45]
+
+print(Maximum(arr))
+
 
 def even_sort(arr):
     '''
@@ -67,7 +103,23 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+def print2largest(arr, arr_size):
+    if (arr_size < 2):
+        print("Invalid Input")
+        return
+
+    arr.sort
+
+    for i in range(arr_size-2, -1, -1):
+        print("The second largest element is", arr[i])
+        return
+
+print("There is no second largest element")
+arr = [12, 35, 1, 10, 34, 1]
+
+n = len(arr)
+print2largest(arr, n)
+
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +140,12 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+A = np.array([[3, -9], [2, 4]])
+b = np.array([-42, 2])
+z = np.linalg.solve(A, b)
+print(z)
+
+M = np.array([[1, -2, -1], [2, 2, -1], [-1, -1, 2]])
+c = np.array([6, 1, 1])
+y = np.linalg.solve(M, c)
+print(y)
