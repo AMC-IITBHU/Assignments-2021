@@ -12,15 +12,13 @@ def demo(x):
     '''
 
     ## Code Here
-def square(num):
+def demo(num):
     return num * num
 
 
 number = float(input("please enter any numeric value:"))
 
-sqre = square(number)
-
-print("the square of a given number", sqre)
+sqre = demo(number)
 
 def is_palindrome(string):
     '''
@@ -44,7 +42,7 @@ def ispalindrome(string):
        right_pos -= 1
        return True
 
-print(ispalindrome("aza"))
+
 
 def sqrt_of_numbers(num):
     '''
@@ -85,7 +83,7 @@ def Maximum(arr):
 
 arr = [10, 324, 45]
 
-print(Maximum(arr))
+
 
 
 def even_sort(arr):
@@ -114,7 +112,7 @@ def print2largest(arr, arr_size):
         print("The second largest element is", arr[i])
         return
 
-print("There is no second largest element")
+
 arr = [12, 35, 1, 10, 34, 1]
 
 n = len(arr)
