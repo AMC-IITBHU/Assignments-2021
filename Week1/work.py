@@ -100,4 +100,4 @@ def eqn_solver(A, B, C):
     a = np.array([x, y])
     b = np.array(C)
     result = np.linalg.solve(a,b)
-    return (result[0], result[1]) 
+    return (round(result[0],1), round(result[1],1)) 
