@@ -1,6 +1,7 @@
 import math
 import numpy as np
 
+
 def demo(x):
     '''
     This is a demo function
@@ -12,7 +13,9 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+
+    return x * x
+
 
 def is_palindrome(string):
     '''
@@ -23,9 +26,9 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
     ## Code Here
-    return None
+    return string == string[::-1]
+
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +40,8 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    return num ** 0.5
+
 
 def Maximum(arr):
     '''
@@ -50,7 +54,11 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    arr.sort()
+    Max1 = arr[-1]
+    Max2 = arr[-2]
+    return Max1, Max2
+
 
 def even_sort(arr):
     '''
@@ -67,7 +75,17 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    arr.sort()
+    arr1 = []
+    arr2 = []
+    for num in arr:
+         if num % 2 == 0:
+            arr1.append(num)
+         else:
+            arr2.append(num)
+
+    a = arr1 + arr2
+    return a
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +106,19 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+    Arr1 = np.array((A, B))
+    Arr1 = np.transpose(Arr1)
+    Arr2 = np.array(C)
+    a = np.linalg.solve(Arr1, Arr2)
+
+    return a[0],a[1]
+
+
+
+
+
+
+
+
+
+
