@@ -10,10 +10,10 @@ def demo(x):
     returns:
         x*x (int)
     '''
+     x=return(a*a)
+    return x
 
-    ## Code Here
-    return None
-
+   
 def is_palindrome(string):
     '''
     This function returns True if the given string is
@@ -24,9 +24,13 @@ def is_palindrome(string):
         flag (bool)
     '''
 
-    ## Code Here
-    return None
+    rev_str = sting[::-1]
+     if (sting==rev_sting):
+         return true
+     else:
+         return false
 
+import cmath
 def sqrt_of_numbers(num):
     '''
     This function returns the magnitude of the square root of the number
@@ -36,8 +40,9 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
 
-    ## Code Here
-    return None
+    num  = cmath.sqrt(a)
+    return num
+
 
 def Maximum(arr):
     '''
@@ -49,8 +54,8 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
 
-    ## Code Here
-    return None
+   arr.sort()
+   return arr[0],arr[1]
 
 def even_sort(arr):
     '''
@@ -66,8 +71,13 @@ def even_sort(arr):
         ## This is any even number is smaller than any odd number
     '''
 
-    ## Code Here
-    return None
+   for i in arr:
+        if (i%2==0):
+            even_arr.append(i)
+        else:
+            odd_arr.append(i)
+    sorted_even = concatenate(even_arr,odd_arr)
+    return sorted_even
 
 
 def eqn_solver(A, B, C):
