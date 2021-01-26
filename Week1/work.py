@@ -21,13 +21,14 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
+    string = string.upper()
     new_string = string[::-1]
     if string == new_string :
         result = True
     else:
         result = False
     return result
-
+import cmath
 def sqrt_of_numbers(num):
     '''
     This function returns the magnitude of the square root of the number
@@ -39,7 +40,7 @@ def sqrt_of_numbers(num):
     if num >= 0 :
         result = num**0.5 
     else:
-        result = abs(num**0.5)
+        result = cmath.sqrt(num)
     return result
 
 def Maximum(arr):
@@ -94,7 +95,9 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-    x = np.array([A, B])
-    y = np.array(C)
-    result = np.linalg.solve(x,y)
-    return (result[0], result[1])
+    x = [A[0] , B[0]]
+    y = [A[1] , B[1]]
+    a = np.array([x, y])
+    b = np.array(C)
+    result = np.linalg.solve(a,b)
+    return (result[0], result[1]) 
