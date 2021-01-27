@@ -1,6 +1,4 @@
-import math
-import numpy as np
-
+from math import *
 def demo(x):
     '''
     This is a demo function
@@ -12,8 +10,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
-
+    return x * x
 def is_palindrome(string):
     '''
     This function returns True if the given string is
@@ -23,9 +20,13 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
     ## Code Here
-    return None
+    a = len(string)
+    k = 0
+    for i in range(round(a / 2)):
+        if string[i] == string[a - i - 1]:
+            k += 1
+    return (k == round(a / 2))
 
 def sqrt_of_numbers(num):
     '''
@@ -35,10 +36,13 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
+    if num < 0:
+        a = "invalid input"
+    else:
+        a = sqrt(num)
 
     ## Code Here
-    return None
-
+    return a
 def Maximum(arr):
     '''
     This function returns first maximum and the second minimum
@@ -48,9 +52,10 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
     ## Code Here
-    return None
+    a = max(arr)
+    arr.remove(a)
+    return a, max(arr)
 
 def even_sort(arr):
     '''
@@ -67,10 +72,22 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    odd = []
+    even = []
+    for i in range(len(arr)):
+        if arr[i] % 2 == 0:
+            a = arr[i]
+            even.append(a)
+        else:
+            a = arr[i]
+            odd.append(a)
+    even.sort()
+    odd.sort()
+    even.extend(odd)
+    return even
 
 
-def eqn_solver(A, B, C):
+def eqn_solver(a, b, c):
     '''
     This function solves a two variable system
     i.e.,
@@ -86,6 +103,8 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
     ## Code Here
-    return None
+    x = ((b[1] * c[0]) - (b[0] * c[1])) / ((b[1] * a[0]) - (b[0] * a[1]))
+    y = ((c[1] * a[0]) - (c[0] * a[1])) / ((b[1] * a[0]) - (b[0] * a[1]))
+
+    return x, y
