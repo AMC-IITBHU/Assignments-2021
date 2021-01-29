@@ -1,4 +1,5 @@
 from math import *
+import numpy as np
 def demo(x):
     '''
     This is a demo function
@@ -21,6 +22,7 @@ def is_palindrome(string):
         flag (bool)
     '''
     ## Code Here
+    string = string.lower()
     a = len(string)
     k = 0
     for i in range(round(a / 2)):
@@ -37,12 +39,13 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
     if num < 0:
-        a = "invalid input"
+        num=abs(num)
+        a=complex(0,sqrt(num))
     else:
         a = sqrt(num)
-
     ## Code Here
     return a
+
 def Maximum(arr):
     '''
     This function returns first maximum and the second minimum
