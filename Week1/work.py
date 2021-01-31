@@ -22,8 +22,8 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-    
-    return string==string[::-1]
+    s=string.lower()
+    return s==s[::-1]
 
 def sqrt_of_numbers(num):
     '''
@@ -33,8 +33,11 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
-    return math.sqrt(abs(num))
+    s=math.sqrt(abs(num))
+    if num>=0:
+        return s
+    else:
+        return(complex(0,s))
 
 def Maximum(arr):
     '''
