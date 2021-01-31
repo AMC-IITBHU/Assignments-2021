@@ -10,9 +10,7 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -23,9 +21,7 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+    return string.lower()==string.lower()[::-1]
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +33,9 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    a = complex(num,0)
+    b = np.sqrt(a)
+    return b.real if b.imag == 0 else b
 
 def Maximum(arr):
     '''
@@ -50,7 +48,7 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    return tuple(sorted(arr)[-1:-3:-1])
 
 def even_sort(arr):
     '''
@@ -67,7 +65,7 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    return sorted(arr,key=lambda x : x-5*max(arr) if x%2==0 else x)
 
 
 def eqn_solver(A, B, C):
@@ -87,5 +85,4 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    ## Code Here
-    return None
+    return np.linalg.inv(np.array([A,B]).T)@np.asarray(C)
