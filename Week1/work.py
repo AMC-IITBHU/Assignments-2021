@@ -21,7 +21,7 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-    return string==string[::-1]
+    return string.lower()==string.lower()[::-1]
 
 def sqrt_of_numbers(num):
     '''
@@ -48,7 +48,7 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return sorted(arr)[-1:-3:-1]
+    return tuple(sorted(arr)[-1:-3:-1])
 
 def even_sort(arr):
     '''
@@ -85,4 +85,4 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    return np.linalg.inv(np.array([A,B]).T)*np.asarray(C)
+    return np.linalg.inv(np.array([A,B]).T)@np.asarray(C)
