@@ -117,4 +117,3 @@ def eqn_solver(A, B, C):
     x=((B[0]*C[1]-B[1]*C[0])/(B[0]*A[1]-B[1]*A[0]))
     ## Code Here
     return (x,y)
-print (Maximum([1,2,3,4,5,6]))
