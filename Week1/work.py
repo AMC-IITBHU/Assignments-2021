@@ -10,9 +10,7 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -23,10 +21,14 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
-
+    string = string.upper()
+    new_string = string[::-1]
+    if string == new_string :
+        result = True
+    else:
+        result = False
+    return result
+import cmath
 def sqrt_of_numbers(num):
     '''
     This function returns the magnitude of the square root of the number
@@ -35,9 +37,11 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
-    ## Code Here
-    return None
+    if num >= 0 :
+        result = num**0.5 
+    else:
+        result = cmath.sqrt(num)
+    return result
 
 def Maximum(arr):
     '''
@@ -48,10 +52,9 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
-    ## Code Here
-    return None
-
+    arr.sort()
+    return (arr[-1],arr[-2])
+    
 def even_sort(arr):
     '''
     This function sorts the array giving higher preference to even numbers
@@ -65,10 +68,16 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
-
-    ## Code Here
-    return None
-
+    new1 = []
+    new2 = []
+    for i in arr:
+        if i % 2 == 0:
+            new1.append(i)
+        else:
+            new2.append(i)
+    new1.sort()
+    new2.sort()
+    return new1 + new2
 
 def eqn_solver(A, B, C):
     '''
@@ -86,6 +95,9 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
-    ## Code Here
-    return None
+    x = [A[0] , B[0]]
+    y = [A[1] , B[1]]
+    a = np.array([x, y])
+    b = np.array(C)
+    result = np.linalg.solve(a,b)
+    return (round(result[0],1), round(result[1],1)) 
