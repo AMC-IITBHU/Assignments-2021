@@ -41,7 +41,8 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
+    if(num<0):
+        num=-1*num
     ## Code Here
     return num**0.5
 
@@ -62,7 +63,7 @@ def Maximum(arr):
                 arr[j]=a
         
     ## Code Here
-    return arr[1],arr[len(arr)-1]
+    return arr[0],arr[len(arr)-1]
 
 def even_sort(arr):
     '''
@@ -117,4 +118,3 @@ def eqn_solver(A, B, C):
     x=((B[0]*C[1]-B[1]*C[0])/(B[0]*A[1]-B[1]*A[0]))
     ## Code Here
     return (x,y)
-print (Maximum([1,2,3,4,5,6]))
