@@ -1,5 +1,5 @@
 import math
-import numpy as np
+#import numpy as np
 
 def demo(x):
     '''
@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return (x*x)
+    return  x*x
 
 def is_palindrome(string):
     '''
@@ -23,9 +23,15 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
+    x=True
+    a=len(string)
+    i=0
+    while(i<a):
+        if(string[i]!=string[a-i-1]):
+            x=False
+        i+=1
     ## Code Here
-    return None
+    return x
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +43,7 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    return num**0.5
 
 def Maximum(arr):
     '''
@@ -48,9 +54,15 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
+    for i in range(0,len(arr),1):
+        for j in range(i,len(arr),1):
+            if(arr[i]>arr[j]):
+                a=arr[i]
+                arr[i]=arr[j]
+                arr[j]=a
+        
     ## Code Here
-    return None
+    return arr[1],arr[len(arr)-1]
 
 def even_sort(arr):
     '''
@@ -65,9 +77,24 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
+    
+    for i in range(0,len(arr),1):
+        one=arr[i]
+        for j in range(i,len(arr),1):
+            if(arr[i]%2==0):
+                if((arr[j]%2==0)and(arr[i]>arr[j])):
+                    one=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=one
+            else:
+                if(arr[j]%2==0 or (arr[i]>arr[j])):
+                    one=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=one
+                    
 
     ## Code Here
-    return None
+    return arr
 
 
 def eqn_solver(A, B, C):
@@ -86,6 +113,8 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
+    y=(A[0]*C[1]-A[1]*C[0])/(A[0]*B[1]-A[1]*B[0])
+    x=((B[0]*C[1]-B[1]*C[0])/(B[0]*A[1]-B[1]*A[0]))
     ## Code Here
-    return None
+    return (x,y)
+print (Maximum([1,2,3,4,5,6]))
