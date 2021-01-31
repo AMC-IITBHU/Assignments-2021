@@ -41,7 +41,7 @@ def sqrt_of_numbers(num):
 
 def Maximum(arr):
     '''
-    This function returns first maximum and the second minimum
+    This function returns first maximum and the second maximum
     number in the array
     args:
         arr (list)
