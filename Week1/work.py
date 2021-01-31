@@ -10,9 +10,12 @@ def demo(x):
     returns:
         x*x (int)
     '''
+    
+    return x*x
+    
 
     ## Code Here
-    return None
+    
 
 def is_palindrome(string):
     '''
@@ -23,9 +26,13 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
+    rev=''.join(reversed(string))
+    if (string==rev):
+     return True
+     return False
 
     ## Code Here
-    return None
+    
 
 def sqrt_of_numbers(num):
     '''
@@ -35,9 +42,11 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
+    num=abs(num)
+    x=math.sqrt(num)
+    return float(x)
     ## Code Here
-    return None
+   
 
 def Maximum(arr):
     '''
@@ -48,9 +57,19 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
+    large=arr[0]
+    slarge=-1
+    for i in range(1,len(arr)):
+         if (arr[i]>large):
+            slarge=large
+            large=arr[i]
+         elif(slarge<arr[i]):
+            slarge=arr[i] 
+            
+            
+    return large,slarge 
     ## Code Here
-    return None
+    
 
 def even_sort(arr):
     '''
@@ -65,9 +84,22 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
+    even=[]
+    for num in arr:
+        if num % 2 == 0:
+            even.append(num)
+    odd=[]
+    for num in arr:
+        if not num % 2 == 0:
+            odd.append(num)
+    even.sort()
+    odd.sort()
 
+    result = even + odd
+
+    return result
     ## Code Here
-    return None
+    
 
 
 def eqn_solver(A, B, C):
@@ -86,6 +118,18 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
+    a1, a2 = A
+    b1, b2 = B
+    c1, c2 = C
 
+    coeff = np.array([[a1, b1], [a2, b2]])
+    constant = np.array([[c1], [c2]])
+    inv = np.linalg.inv(coeff)
+    actual = np.dot(inv,constant)
+    d = actual.reshape(1,-1)
+    x = d[0][0]
+    y = d[0][1]
+
+    return x,y
     ## Code Here
-    return None
+   
