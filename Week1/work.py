@@ -65,7 +65,7 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return sorted(a,key=lambda x : x-5*max(a) if x%2==0 else x)
+    return sorted(arr,key=lambda x : x-5*max(a) if x%2==0 else x)
 
 
 def eqn_solver(A, B, C):
