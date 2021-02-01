@@ -42,8 +42,9 @@ def sqrt_of_numbers(num):
         sqroot (float)
     '''
     if(num<0):
-        num=-1*num
-    return abs(num**0.5)
+        return complex(0,(-1*num)**(0.5))
+    else:
+        return num**0.5
 
 def Maximum(arr):
     '''
