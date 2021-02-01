@@ -30,7 +30,6 @@ def is_palindrome(string):
         if(string[i]!=string[a-i-1]):
             x=False
         i+=1
-    ## Code Here
     return x
 
 def sqrt_of_numbers(num):
