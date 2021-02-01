@@ -1,4 +1,5 @@
 import math
+import string
 #import numpy as np
 
 def demo(x):
@@ -10,8 +11,6 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
     return  x*x
 
 def is_palindrome(string):
@@ -25,6 +24,7 @@ def is_palindrome(string):
     '''
     x=True
     a=len(string)
+    string=string.lower()
     i=0
     while(i<a):
         if(string[i]!=string[a-i-1]):
@@ -62,7 +62,6 @@ def Maximum(arr):
                 arr[i]=arr[j]
                 arr[j]=a
         
-    ## Code Here
     return arr[0],arr[len(arr)-1]
 
 def even_sort(arr):
