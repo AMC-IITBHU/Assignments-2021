@@ -62,7 +62,7 @@ def Maximum(arr):
                 arr[i]=arr[j]
                 arr[j]=a
         
-    return arr[0],arr[1]
+    return arr[len(arr)-1],arr[len(arr)-2]
 
 def even_sort(arr):
     '''
