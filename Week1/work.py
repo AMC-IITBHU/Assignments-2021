@@ -1,5 +1,4 @@
 from math import *
-import numpy as np
 def demo(x):
     '''
     This is a demo function
@@ -89,7 +88,7 @@ def even_sort(arr):
     even.extend(odd)
     return even
 
-
+#print
 def eqn_solver(a, b, c):
     '''
     This function solves a two variable system
