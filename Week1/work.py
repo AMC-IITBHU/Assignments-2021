@@ -43,8 +43,7 @@ def sqrt_of_numbers(num):
     '''
     if(num<0):
         num=-1*num
-    ## Code Here
-    return num**0.5
+    return abs(num**0.5)
 
 def Maximum(arr):
     '''
@@ -62,7 +61,7 @@ def Maximum(arr):
                 arr[i]=arr[j]
                 arr[j]=a
         
-    return arr[0],arr[len(arr)-1]
+    return arr[0],arr[len(arr)-2]
 
 def even_sort(arr):
     '''
