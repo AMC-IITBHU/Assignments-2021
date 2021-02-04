@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -25,7 +25,14 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    reversed_string = string[::-1]
+    
+    if reversed_string == string:
+        return bool(1)
+    else:
+        return bool(0)
+    
+    
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +44,7 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    return np.sqrt(abs(num))
 
 def Maximum(arr):
     '''
@@ -50,7 +57,9 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    x1 = np.sort(arr)[-1]
+    x2 = np.sort(arr)[-2]
+    return x1,x2
 
 def even_sort(arr):
     '''
@@ -67,7 +76,24 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    even = []
+    odd = []
+
+    for i in arr:
+        if i %2 == 0:
+            even.append(i)
+        else:
+            odd.append(i)
+
+    even = np.sort(even)
+    odd = np.sort(odd)
+
+    arr =[]
+    for i in even:
+        arr.append(i)
+    for i in odd:
+        arr.append(i)
+    return arr
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +114,18 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+    x1, x2 = A
+    y1, y2 = B
+    c1, c2 = C
+
+    coeff_matrix = np.array([[x1, y1], [x2, y2]])
+    const_matrix = np.array([[c1], [c2]])
+    inverse = np.linalg.inv(coeff_matrix)
+    actual = np.dot(inverse,const_matrix)
+    d = actual.reshape(1,-1)
+    x = d[0][0]
+    y = d[0][1]
+  
+    return x,y
+    
+    
