@@ -26,7 +26,7 @@ def is_palindrome(string):
 
     ## Code Here
     for i in range(int(len(string)/2)):
-        if(string[i]!=string[len(string)-1-i]):
+        if(string[i].lower()!=string[len(string)-1-i].lower()):
             return False
     return True
 
