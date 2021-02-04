@@ -26,7 +26,7 @@ def is_palindrome(string):
 
     ## Code Here
     for i in range(int(len(string)/2)):
-        if(s[i]!=s[len(str)-1-i]):
+        if(string[i]!=string[len(string)-1-i]):
             return False
     return True
 
@@ -40,7 +40,10 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return math.sqrt(math.fabs(num))
+    if(num>=0):
+        return math.sqrt(num)
+    else:
+        return complex(0,math.sqrt(math.fabs(num)))
     
         
 
@@ -78,7 +81,7 @@ def even_sort(arr):
     even=[]
     odd=[]
     for i in range(len(arr)):
-        if(arr[i]&1):
+        if(arr[i] % 2):
             odd.append(arr[i])
         else:
             even.append(arr[i])
@@ -108,5 +111,5 @@ def eqn_solver(A, B, C):
 
     ## Code Here
     x=(C[0]*B[1]-B[0]*C[1])/(B[1]*A[0]-B[0]*A[1])
-    y=C[0]*A[1]-A[0]*C[1]/(-B[1]*A[0]+B[0]*A[1])
+    y=(C[0]*A[1]-A[0]*C[1])/(-B[1]*A[0]+B[0]*A[1])
     return x,y
