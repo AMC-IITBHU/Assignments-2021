@@ -1,5 +1,6 @@
 import math
-import numpy as np
+import string
+#import numpy as np
 
 def demo(x):
     '''
@@ -10,9 +11,7 @@ def demo(x):
     returns:
         x*x (int)
     '''
-
-    ## Code Here
-    return None
+    return  x*x
 
 def is_palindrome(string):
     '''
@@ -23,9 +22,15 @@ def is_palindrome(string):
     returns:
         flag (bool)
     '''
-
-    ## Code Here
-    return None
+    x=True
+    a=len(string)
+    string=string.lower()
+    i=0
+    while(i<a):
+        if(string[i]!=string[a-i-1]):
+            x=False
+        i+=1
+    return x
 
 def sqrt_of_numbers(num):
     '''
@@ -35,9 +40,10 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
-    ## Code Here
-    return None
+    if(num<0):
+        return complex(0,(-1*num)**(0.5))
+    else:
+        return num**0.5
 
 def Maximum(arr):
     '''
@@ -48,9 +54,14 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
-
-    ## Code Here
-    return None
+    for i in range(0,len(arr),1):
+        for j in range(i,len(arr),1):
+            if(arr[i]>arr[j]):
+                a=arr[i]
+                arr[i]=arr[j]
+                arr[j]=a
+        
+    return arr[len(arr)-1],arr[len(arr)-2]
 
 def even_sort(arr):
     '''
@@ -65,9 +76,23 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
+    
+    for i in range(0,len(arr),1):
+        one=arr[i]
+        for j in range(i,len(arr),1):
+            if(arr[i]%2==0):
+                if((arr[j]%2==0)and(arr[i]>arr[j])):
+                    one=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=one
+            else:
+                if(arr[j]%2==0 or (arr[i]>arr[j])):
+                    one=arr[i]
+                    arr[i]=arr[j]
+                    arr[j]=one
+                    
 
-    ## Code Here
-    return None
+    return arr
 
 
 def eqn_solver(A, B, C):
@@ -86,6 +111,6 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
-    ## Code Here
-    return None
+    y=(A[0]*C[1]-A[1]*C[0])/(A[0]*B[1]-A[1]*B[0])
+    x=((B[0]*C[1]-B[1]*C[0])/(B[0]*A[1]-B[1]*A[0]))
+    return (x,y)
