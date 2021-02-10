@@ -1,91 +1,63 @@
+# assignment1
 import math
 import numpy as np
 
 def demo(x):
-    '''
-    This is a demo function
-    Where in you just return square of the number
-    args:
-        x (int)
-    returns:
-        x*x (int)
-    '''
-
-    ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
-    '''
-    This function returns True if the given string is
-    a Palindrome
-    args:
-        string (str)
-    returns:
-        flag (bool)
-    '''
-
-    ## Code Here
-    return None
+    temp = " "
+    for i in string:
+        temp = i + temp
+    if temp == string:
+        return True
+    return False
 
 def sqrt_of_numbers(num):
-    '''
-    This function returns the magnitude of the square root of the number
-    args:
-        num (int) Need not be positive
-    returns:
-        sqroot (float)
-    '''
-
-    ## Code Here
-    return None
+    if num >= 0:
+        return math.sqrt(num)
+    r = str(math.sqrt((abs(num))))+' i'
+    return r
 
 def Maximum(arr):
-    '''
-    This function returns first maximum and the second maximum
-    number in the array
-    args:
-        arr (list)
-    returns:
-        Max1, Max2 (int, int)
-    '''
-
-    ## Code Here
-    return None
+    arr.sort(reverse=True)
+    return [arr[0], arr[1]]
 
 def even_sort(arr):
-    '''
-    This function sorts the array giving higher preference to even numbers
-    args:
-        arr (list)
-    returns:
-        sort_arr (list)
-    ex:
-        arr = [15, 2, 6, 88, 7]
-        ## then
-        sort_arr = [2, 6, 88 ,7 ,15]
-        ## This is any even number is smaller than any odd number
-    '''
-
-    ## Code Here
-    return None
-
+    even = []
+    odd = []
+    for i in arr:
+        if (i % 2 == 0):
+            even.append(i)
+        else:
+            odd.append(i)
+    even.sort()
+    odd.sort()
+    even.extend(odd)
+    return even
 
 def eqn_solver(A, B, C):
-    '''
-    This function solves a two variable system
-    i.e.,
-        A = [ 1, 2 ]
-        B = [ 3, 4 ]
-        C = [ 5, 6 ]
-        then it means
-        1x + 3y = 5
-        2x + 4y = 6
-        Hence you are required to find x, y for such a linear system
-    args:
-        A, B, C (list, list, list) representing coefficients in the equation
-    returns:
-        x, y (float, float)
-    '''
-
-    ## Code Here
-    return None
+    m=A[0]
+    n=B[0]
+    if m > n:
+        smaller = n
+    else:
+        smaller = m
+    for i in range(1, smaller + 1):
+        if ((m % i == 0) and (n % i == 0)):
+            hcf = i
+    prd = m * n
+    lcm = prd / hcf
+    m1 = lcm / A[0]
+    m2 = lcm / B[0]
+    y1 = A[1] * m1
+    y2 = B[1] * m2
+    y = y1 - y2
+    c1 = C[0] * m1
+    c2 = C[1] * m2
+    cn = c1 - c2
+    ya = cn / y
+    xa = (C[0] - (A[1] * ya)) / A[0]
+    print(xa)
+    print(ya)
+    return [xa,ya]
