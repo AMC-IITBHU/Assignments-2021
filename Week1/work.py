@@ -27,6 +27,8 @@ def is_palindrome(string):
     ## Code Here
     if string[::-1]==string:
         return True
+    else:
+        return False
 
 def sqrt_of_numbers(num):
     '''
