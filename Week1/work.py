@@ -11,7 +11,7 @@ def demo(x):
         x*x (int)
     '''
 
-    ## Code Here
+  X^2
     return None
 
 def is_palindrome(string):
