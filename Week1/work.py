@@ -12,7 +12,7 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
+    return x*x
 
 def is_palindrome(string):
     '''
@@ -25,7 +25,13 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    x=[]
+    for i in range(len(string)):
+		x.append(string[len(string)-i-1])
+    if x.all()==string.all():
+    	return True
+    else:
+    	return False
 
 def sqrt_of_numbers(num):
     '''
@@ -37,7 +43,7 @@ def sqrt_of_numbers(num):
     '''
 
     ## Code Here
-    return None
+    return sqroot(num)
 
 def Maximum(arr):
     '''
@@ -50,7 +56,11 @@ def Maximum(arr):
     '''
 
     ## Code Here
-    return None
+    arr.sort(reverse=True)
+    max1=arr[0]
+    max2=arr[1]
+    	
+    return max1,max2;
 
 def even_sort(arr):
     '''
@@ -67,7 +77,20 @@ def even_sort(arr):
     '''
 
     ## Code Here
-    return None
+    
+    for i in range(len(arr)): 
+    	 arr.append(int(input()))
+	arr.sort()
+	arrev=[]
+	arrod=[]
+	for i in range(x): 
+    	 if arr[i]%2==0:
+    	 	arrev.append(arr[i])
+    	 else:
+    	 	arrod.append(arr[i])
+    arr1=np.concatenate(arrev,arrod)
+    	 	
+    return arr1
 
 
 def eqn_solver(A, B, C):
@@ -88,4 +111,7 @@ def eqn_solver(A, B, C):
     '''
 
     ## Code Here
-    return None
+    
+    x=float((B[1]*C[0] - B[0]*C[1])/(A[0]*B[1] - A[1]*B[0]))
+    y=float((A[1]*C[0] - A[0]*C[1])/(A[1]*B[0] - A[0]*B[1])))
+    return x,y;
