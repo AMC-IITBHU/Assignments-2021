@@ -110,7 +110,7 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    ## Code Here
+    
     
     x=float((B[1]*C[0] - B[0]*C[1])/(A[0]*B[1] - A[1]*B[0]))
     y=float((A[1]*C[0] - A[0]*C[1])/(A[1]*B[0] - A[0]*B[1])))
