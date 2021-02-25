@@ -12,8 +12,9 @@ def demo(x):
     '''
 
     ## Code Here
-    return None
-
+    return x*x
+#y=6
+#print (demo(9))
 def is_palindrome(string):
     '''
     This function returns True if the given string is
@@ -25,8 +26,17 @@ def is_palindrome(string):
     '''
 
     ## Code Here
-    return None
+    for i in range(0,len(string)):
+        if string[i] != string[len(string)-i-1]:
+            return 0
 
+
+
+    return 1
+'''
+s1='n mam n'
+print(is_palindrome(s1))
+'''
 def sqrt_of_numbers(num):
     '''
     This function returns the magnitude of the square root of the number
@@ -35,10 +45,10 @@ def sqrt_of_numbers(num):
     returns:
         sqroot (float)
     '''
-
+    s=math.sqrt(num)
     ## Code Here
-    return None
-
+    return s
+#print (sqrt_of_numbers(101))
 def Maximum(arr):
     '''
     This function returns first maximum and the second maximum
@@ -48,10 +58,21 @@ def Maximum(arr):
     returns:
         Max1, Max2 (int, int)
     '''
+   # numpy.zeros(shape, dtype=float, order='C', *, like=None)¶
+
+    y=arr[0]
+    z=y
+    for i in arr:
+        if i>y:
+            z=y
+            y=i
+
+
 
     ## Code Here
-    return None
-
+    return y,z
+#arr=[1,4,5,6,777,9999]
+#print(Maximum(arr))
 def even_sort(arr):
     '''
     This function sorts the array giving higher preference to even numbers
@@ -65,12 +86,27 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
+    a1=[]
+    a2=[]
+    for i in arr:
+        if(i%2==0):
+            a1.append(i)
+
+        else:
+            a2.append(i)
+
+    a1.sort()
+    a2.sort()
+   ## np.concatenate((a1,a2),axis=0)
 
     ## Code Here
-    return None
+    return (a1+a2)
+#    a=a.append([i])
 
+#arr=[0,1,2,4,6,3,234324,34]
+#print( even_sort(arr))
 
-def eqn_solver(A, B, C):
+def eqn_solver(a, b, c):
     '''
     This function solves a two variable system
     i.e.,
@@ -86,6 +122,13 @@ def eqn_solver(A, B, C):
     returns:
         x, y (float, float)
     '''
-
+    x=(c[0]*b[1]-b[0]*c[1])/(a[0]*b[1]-a[1]*b[0])
+    y=(a[0]*c[1]-a[1]*c[0])/(a[0]*b[1]-a[1]*b[0])
     ## Code Here
-    return None
+    return x,y
+'''
+a=[12,2]
+b=[3,-3]
+c=[15,13]
+print(eqn_solver(a, b, c))
+'''
